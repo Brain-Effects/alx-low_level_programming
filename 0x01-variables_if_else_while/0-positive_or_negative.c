@@ -21,13 +21,13 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 	if (n >= 0)
 	{
-		printf("is positive\n");
+		printf("98 is positive\n");
 	} else if (n == 0)
 	{
 		printf("is zero\n");
 	} else
 {
-		printf("is negative\n");
+		printf("-98 is negative\n");
 	}
 	return (0);
 }
