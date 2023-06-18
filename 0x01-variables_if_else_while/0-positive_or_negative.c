@@ -8,7 +8,7 @@
  * if the number is less than 0: is negative
  */
 
-int main(0)
+int main(void)
 {
 	int n;
 
