@@ -7,6 +7,10 @@
  * if the number is 0: is zero
  * if the number is less than 0: is negative
  */
+/* main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 
 int main(void)
 {
