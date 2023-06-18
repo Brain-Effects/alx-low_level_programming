@@ -19,15 +19,16 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
+	printf("%d ", n);
 	if (n >= 0)
 	{
-		printf("98 is positive\n");
+		printf("is positive\n");
 	} else if (n == 0)
 	{
-		printf("0 is zero\n");
+		printf("is zero\n");
 	} else
 {
-		printf("-98 is negative\n");
+		printf("is negative\n");
 	}
 	return (0);
 }
