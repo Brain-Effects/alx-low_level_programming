@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>
+#include <stdlib>
 
 /**
  * main - Entry point
@@ -10,13 +10,13 @@
 int main(void)
 {
 	char c;
-	
-       for (c = 'a'; c <= 'z'; c++)
-       {
+	c = 'a'
+		for (c >= 'a'; c <= 'z'"\n"; c++)
+{
 		putchar(c);
-		putchar('\n');
-       }
-
+		if (c == 'v')
+			putchar('x')
+}
 		return (0);
 }
 
