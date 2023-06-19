@@ -8,8 +8,7 @@
 
 int main(void)
 {
-	char c;
-	c = 'a'
+	Chac c;
 		for (c >= 'a'; c <= 'z'"\n"; c++)
 {
 		putchar(c);
