@@ -8,13 +8,12 @@
 
 int main(void)
 {
-	Chac c;
-		for (c >= 'a'; c <= 'z'"\n"; c++)
+	char c;
+		for (c = 'a'; c <= 'z'; c++)
 {
 		putchar(c);
-		if (c == 'v')
+		if (c == 'v');
 			putchar('x')
 }
 		return (0);
 }
-
