@@ -9,11 +9,15 @@
 int main(void)
 {
 	char c;
-		for (c = 'a'; c <= 'z'; c++)
+
+	for(c = 'a'; c <= 'z'; c++)
 {
-		putchar(c);
-		if (c == 'v');
-			putchar('x')
+	putchar(c);
+	if(c == 'v')
+	putchar('x');
 }
-		return (0);
+	putchar('\n');
+
+	return (0);
 }
+
