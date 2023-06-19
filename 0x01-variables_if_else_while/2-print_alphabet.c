@@ -16,8 +16,5 @@ int main(void)
 	if(c == 'v')
 	putchar('x');
 }
-	putchar('\n');
-
 	return (0);
 }
-
