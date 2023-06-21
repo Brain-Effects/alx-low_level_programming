@@ -1,7 +1,7 @@
 #include <unistd.h>
 #include "main.h"
 /**
- * viod print_alphabet - Entry piont
+ * print_alphabet - Entry piont
  *
  */
 void print_alphabet(void)
