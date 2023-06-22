@@ -25,10 +25,10 @@ void times_table(void)
 		}
 	else
 		{
-	if (j != 0)
+		if (j != 0)
 		_putchar(' ');
 		_putchar(product + '0');
-	    	}
+		}
 		}
 		_putchar('\n');
 	}
