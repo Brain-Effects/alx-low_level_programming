@@ -1,7 +1,9 @@
 #include "unistd.h"
 #include "main.h"
 /**
- * int_add - adds two intergers and returns the result
+ * add - adds two integers and returns the result
+ * @a: the first integer to add
+ * @b: the second integer to add
  *
  * Return: Always 0
  */
