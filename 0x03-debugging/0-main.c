@@ -2,6 +2,7 @@
 #include "unistd.h"
 /**
 * main - tests function that prints if integer is positive or negative
+* @i: integer
 * Return: 0
 */
 
