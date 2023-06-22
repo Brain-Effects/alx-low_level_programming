@@ -32,7 +32,6 @@ void print_to_98(int n)
 	print_number(n);
 	_putchar('\n');
 }
-
 void print_number(int n)
 {
 	int i, j, div;
