@@ -1,5 +1,4 @@
 #include "stdlib.h"
-#include "holberton.h"
 
 /**
  * main - Entry point
@@ -40,7 +39,7 @@ int main(void)
 	else
 		{
 		print_number(i);
-		}	
+		}
 
 	if (i < 100)
 	{
