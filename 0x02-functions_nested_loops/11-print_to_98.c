@@ -14,7 +14,7 @@ void print_to_98(int n)
 	{
 	for (; n < 98; n++)
 	{
-		write("char %d", n);
+		print_nmuber(int n);
 		_putchar(',');
 		_putchar(' ');
 	}
@@ -23,12 +23,12 @@ void print_to_98(int n)
 	{
 	for (; n > 98; n--)
 	{
-		write("char %d", n);
+		print_number(int n);
 		_putchar(',');
 		_putchar(' ');
 	}
 	}
 
-	write("char %d", n);
+	print_number(int n);
 	_putchar('\n');
 }
