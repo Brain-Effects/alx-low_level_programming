@@ -28,6 +28,6 @@ void print_to_98(int n)
 	}
 	}
 
-	_putchar(n);
+	print_number(n);
 	_putchar('\n');
 }
