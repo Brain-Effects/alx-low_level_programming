@@ -14,7 +14,7 @@ void print_to_98(int n)
 	{
 	for (; n < 98; n++)
 	{
-		print_nmuber(int n);
+		print_number(int n);
 		_putchar(',');
 		_putchar(' ');
 	}
