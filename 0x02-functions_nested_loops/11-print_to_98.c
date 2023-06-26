@@ -29,6 +29,6 @@ void print_to_98(int n)
 	}
 	}
 
-	_putchar('%d', n);
+	_putchar("%d", n);
 	_putchar('\n');
 }
