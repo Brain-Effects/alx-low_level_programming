@@ -1,11 +1,11 @@
 #include "main.h"
 
-/*
-   * _strlen_recursion - returns the length of a string
-   * @s: The string that should be returned.
-   *
-   * Return: Always 0
-   */
+/**
+ * _strlen_recursion - returns the length of a string
+ * @s: pointer to the first character of the string
+ *
+ * Return: length of the string
+ */
 int _strlen_recursion(char *s)
 {
 	if (*s == '\0')
