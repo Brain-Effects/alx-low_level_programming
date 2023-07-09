@@ -2,10 +2,12 @@
 #include <stdio.h>
 
 /**
- * _memcpy() - Copies n bytes from memory area src to memory area dest
- * @n: The number of bytes to be coppied
+ * _memcpy - copies memory area
+ * @dest: destination memory area
+ * @src: source memory area
+ * @n: number of bytes to copy
  *
- * Return: Nothing.
+ * Return: pointer to dest
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
