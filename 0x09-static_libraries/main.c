@@ -1,5 +1,12 @@
 #include "main.h"
 
+/**
+  * _puts - Prints the s string followed by a new line
+  * @s: The string that needs to be printed
+  *
+  * Return: 0
+  */
+
 void _puts(char *s)
 {
 	while (*s)

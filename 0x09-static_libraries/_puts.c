@@ -1,7 +1,8 @@
 #include "main.h"
 
 /**
- * main - check the code
+ * _puts - Prints the s string followed by a new line
+ * @s: The string that needs to be printed
  *
  * Return: Always 0.
  */
