@@ -6,16 +6,17 @@
  *
  * Return: Always 0.
  */
-int main(void)
+char *_strchr(char *s, char c)
 {
-	char *s = "hello";
-	char *f;
-
-	f = _strchr(s, 'l');
-
-	if (f != NULL)
+	while (*s != '\0')
 	{
-		printf("%s\n", f);
+	if (*s == c)
+		return (s);
+	s++;
 	}
+
+	if (c == '\0')
+	return (s);
+
 	return (0);
 }

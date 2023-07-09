@@ -2,17 +2,24 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _strcmp - compares two strings
+ * @s1: first string
+ * @s2: second string
  *
- * Return: Always 0.
+ * Return: difference between the first non-matching characters,
+ * or 0 if the strings are equal
  */
-int main(void)
+int _strcmp(char *s1, char *s2)
 {
-	char s1[] = "Hello";
-	char s2[] = "World!";
+	int i;
 
-	printf("%d\n", _strcmp(s1, s2));
-	printf("%d\n", _strcmp(s2, s1));
-	printf("%d\n", _strcmp(s1, s1));
-	return (0);
+	for (i = 0; s1[i] != '\0' && s2[i] != '\0'; i++)
+	{
+		if (s1[i] != s2[i])
+		{
+		return (s1[i] - s2[i]);
+		}
+	}
+
+	return (s1[i] - s2[i]);
 }

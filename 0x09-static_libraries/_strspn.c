@@ -2,17 +2,30 @@
 #include <stdio.h>
 
 /**
- * main - check the code
+ * _strspn - gets the length of a prefix substring
+ * @s: string to search
+ * @accept: set of bytes to search for
  *
- * Return: Always 0.
+ * Return: the number of bytes in the initial segment of s which consist only
+ * of bytes from accept
  */
-int main(void)
+unsigned int _strspn(char *s, char *accept)
 {
-	char *s = "hello, world";
-	char *f = "oleh";
-	unsigned int n;
+	unsigned int count = 0;
+	char *p;
 
-	n = _strspn(s, f);
-	printf("%u\n", n);
-	return (0);
+	for (; *s; s++)
+	{
+	for (p = accept; *p; p++)
+	{
+		if (*s == *p)
+		{
+		count++;
+		break;
+		}
+	}
+	if (!*p)
+		break;
+	}
+	return (count);
 }
