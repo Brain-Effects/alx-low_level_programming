@@ -22,7 +22,7 @@ void print_name(char *name, void (*f)(char *))
  */
 void print_upper(char *name)
 {
-	int i = 0; i
+	int i = 0;
 
 	while (name[i])
 	{
