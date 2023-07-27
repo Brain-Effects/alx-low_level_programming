@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlb.h>
 #include <stdarg.h>
-#include <sting.h>
+#include <string.h>
 #include "lists.h"
 
 /**
