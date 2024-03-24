@@ -9,6 +9,9 @@ SRC := $(wildcard *.c)
 # Name of the executable
 EXECUTABLE := school
 
+# Mark 'all' as a phony target
+.PHONY: all $(EXECUTABLE)
+
 # The 'all' rule for building the executable
 all: $(EXECUTABLE)
 
