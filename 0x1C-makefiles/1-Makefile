@@ -1,0 +1,20 @@
+# Makefile for building the 'school' executable
+
+# Compiler to be used
+CC := gcc
+
+# Source files
+SRC := $(wildcard *.c)
+
+# Name of the executable
+EXECUTABLE := school
+
+# The 'all' rule for building the executable
+all: $(EXECUTABLE)
+
+$(EXECUTABLE): $(SRC)
+	$(CC) $(SRC) -o $(EXECUTABLE)
+
+# Clean the build
+clean:
+	rm -f $(EXECUTABLE)
