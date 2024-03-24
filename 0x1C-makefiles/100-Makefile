@@ -1,0 +1,49 @@
+# Compiler and flags
+CC := gcc
+CFLAGS := -Wall -Werror -Wextra -pedantic
+
+# Name of the executable
+NAME := school
+
+# Source and object files
+SRC := $(wildcard *.c)
+OBJ := $(SRC:.c=.o)
+
+# Standard delete command
+RM := rm -f
+
+# Phony targets
+.PHONY: all clean fclean oclean re FORCE
+
+# Default rule
+all: $(NAME)
+
+# Link the program
+$(NAME): $(OBJ)
+	$(CC) $(OBJ) -o $(NAME)
+
+# Pattern rule for object files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean Emacs and Vim temporary files and the executable
+clean:
+	-$(RM) *~ *#
+	-$(RM) $(NAME)
+
+# Clean object files
+oclean:
+	-$(RM) $(OBJ)
+
+# Full clean: temporary files, executable, and object files
+fclean: clean oclean
+
+# Rebuild the program
+re: fclean all
+
+# Include dependency files
+-include $(OBJ:.o=.d)
+
+# Rule to generate a dependency file by using the C preprocessor
+%.d: %.c
+	@$(CC) $(CFLAGS) $< -MM -MT $(@:.d=.o) >$@
