@@ -1,0 +1,58 @@
+# Makefile for building the 'school' executable
+
+# Compiler to be used
+CC := gcc
+
+# Program to delete files
+RM := rm -f
+
+# Source files
+SRC := $(wildcard *.c)
+
+# Object files
+OBJ := $(SRC:.c=.o)
+
+# Name of the executable
+NAME := school
+
+# The all rule builds the executable
+.PHONY: all
+all: $(NAME)
+
+# Rule for building object files
+%.o: %.c
+	@echo "gcc -c -o $@ $<"
+	@$(CC) -c $< -o $@
+
+# Rule for building the executable
+$(NAME): $(OBJ) FORCE
+	@echo "gcc $(OBJ) -o $(NAME)"
+	@$(CC) $(OBJ) -o $(NAME)
+
+# Clean rule for deleting all Emacs and Vim temporary files along with the executable
+clean:
+	@echo "$(RM) *~ *# $(NAME)"
+	@$(RM) *~ *# $(NAME)
+
+# Oclean rule for deleting the object files
+oclean:
+	@echo "$(RM) $(OBJ)"
+	@$(RM) $(OBJ)
+
+# Fclean rule for deleting all Emacs and Vim temporary files, the executable, and the object files
+fclean: clean oclean
+
+# Re rule for forcing recompilation of all source files
+re: fclean
+	@$(RM) $(OBJ)
+	@echo "gcc    -c -o main.o main.c"
+	@$(CC) -c -o main.o main.c
+	@echo "gcc    -c -o school.o school.c"
+	@$(CC) -c -o school.o school.c
+	@echo "gcc main.o school.o -o school"
+	@$(CC) main.o school.o -o school
+
+# Dummy rule to force rebuild
+FORCE: ;
+
+.PHONY: all clean oclean fclean re FORCE
