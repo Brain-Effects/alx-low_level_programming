@@ -1,0 +1,37 @@
+# Makefile for building the 'school' executable
+
+# Compiler to be used
+CC := gcc
+
+# Source files
+SRC := $(wildcard *.c)
+
+# Object files
+OBJ := $(SRC:.c=.o)
+
+# Name of the executable
+NAME := school
+
+# The all rule builds the executable
+.PHONY: all
+all: $(NAME)
+
+# The all rule builds the executable
+all: $(NAME)
+
+# Rule for building the executable
+$(NAME): $(OBJ) FORCE
+	$(CC) $(SRC) -o $(NAME)
+
+# Rule for building object files
+%.o: %.c
+	$(CC) -c $< -o $@
+
+# Clean rule for removing the executable and object files
+clean:
+	rm -f $(NAME) $(OBJ)
+
+# Force rule to always run
+FORCE:
+
+.PHONY: all clean FORCE
