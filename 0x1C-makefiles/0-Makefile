@@ -1,0 +1,8 @@
+# Makefile
+
+# The name of the executable to be created.
+EXECUTABLE := school
+
+# The rule 'all' that builds the executable.
+all:
+	@gcc main.c school.c -o school
