@@ -1,8 +1,18 @@
-# Makefile
+# Makefile for building the 'school' executable
 
-# The name of the executable to be created.
+# Name of the executable
 EXECUTABLE := school
 
-# The rule 'all' that builds the executable.
+# The all rule builds the executable
 all:
-	@gcc main.c school.c -o school
+	gcc main.c school.c -o $(EXECUTABLE)
+
+# Rule for building the executable
+$(EXECUTABLE):
+	gcc -o $(EXECUTABLE) main.c school.c
+
+# Clean rule for removing the executable
+clean:
+	rm -f $(EXECUTABLE)
+
+.PHONY: all clean
