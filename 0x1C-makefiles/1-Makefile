@@ -14,7 +14,7 @@ all: $(EXECUTABLE)
 
 # Rule for building the executable
 $(EXECUTABLE): FORCE
-	@echo "gcc main.c school.c -o school"
+	@echo "$(CC) $(SRC) -o $(EXECUTABLE)"
 	@$(CC) $(SRC) -o $(EXECUTABLE)
 
 # Force rule to always run
